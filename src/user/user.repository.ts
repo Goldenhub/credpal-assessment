@@ -17,4 +17,12 @@ export class UserRepository implements IUserRepository {
   async findById(id: string): Promise<IUser | null> {
     return UserModel.findById(id).exec();
   }
+
+  async find(qry: Record<string, string>) {
+    return UserModel.find(qry).exec();
+  }
+
+  async findOne(qry: Record<string, string | object>) {
+    return UserModel.findOne(qry).exec();
+  }
 }

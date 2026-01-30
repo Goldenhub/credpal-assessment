@@ -73,6 +73,7 @@ npm install
 
 ```bash
 DATABASE_URL=<your-mongodb-uri>
+DB_NAME=<your-db-name>
 ACCESS_TOKEN_SECRET=<your-jwt-secret>
 ACCESS_TOKEN_EXPIRATION=<your-jwt-expiration>
 PORT=<your-port>

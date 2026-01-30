@@ -18,6 +18,6 @@ export const authenticate = handleTryCatch(async (req: Request, _res: Response, 
   if (!data) {
     throw new CustomError("Unauthorized", 401);
   }
-  req.user = { id: data.sub, email: data.email, username: data.username, firstname: data.firstname, lastname: data.lastname };
+  req.user = { id: data.sub, email: data.email, username: data.username, profileUpdated: data.profileUpdated };
   next();
 });

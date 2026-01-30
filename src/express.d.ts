@@ -1,9 +1,9 @@
-import type { IUser } from "./user/user.interface";
+import type { IAuthUser } from "./user/user.interface";
 
 declare global {
   namespace Express {
     interface Request {
-      user?: Omit<IUser, "password">;
+      user?: IAuthUser;
     }
   }
 }

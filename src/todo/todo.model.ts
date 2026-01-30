@@ -9,6 +9,11 @@ const todoSchema = new Schema<ITodo>(
       required: true,
       trim: true,
     },
+    content: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     completed: {
       type: Boolean,
       default: false,

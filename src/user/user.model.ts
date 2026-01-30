@@ -35,6 +35,18 @@ const userSchema = new Schema<IUser>(
       lowercase: true,
       trim: true,
     },
+    profileUpdated: {
+      type: Boolean,
+      default: false,
+    },
+    resetPasswordToken: {
+      type: String,
+      required: false,
+    },
+    resetPasswordExpires: {
+      type: String,
+      required: false,
+    },
   },
   {
     timestamps: {

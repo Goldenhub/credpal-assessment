@@ -1,9 +1,17 @@
-import type { ITodo, ITodoRepository } from "./todo.interface";
+import { Types } from "mongoose";
+import type { ICreateTodo, ITodo, ITodoRepository } from "./todo.interface";
 import { TodoModel } from "./todo.model";
 
 export class TodoRepository implements ITodoRepository {
-  async create(todo: Partial<ITodo>): Promise<ITodo> {
-    return TodoModel.create(todo);
+  async create(todo: ICreateTodo): Promise<ITodo> {
+    return TodoModel.create({
+      ...todo,
+      userId: new Types.ObjectId(todo.userId),
+    });
+  }
+
+  async findAll(userId: string): Promise<ITodo[]> {
+    return TodoModel.find({ userId: new Types.ObjectId(userId) }).exec();
   }
 
   async findById(id: string): Promise<ITodo | null> {

@@ -4,7 +4,10 @@
   "description": "APp to track my todos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "ENV=development ts-node-dev public/index.ts",
+    "start": "node dist/public/index.js",
+    "lint": "npx @biomejs/biome lint './src/**/*.{controller,dto,services,}.{ts,js}' './public', './src/**/**/*.{ts,js}'"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
     "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
     "dotenv": "^17.2.3",
     "dotenv-cli": "^10.0.0",
     "express": "^5.2.1",
