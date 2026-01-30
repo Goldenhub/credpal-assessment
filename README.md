@@ -94,8 +94,8 @@ npm run build
 npm start
 ```
 
-The API will run on localhost
+The API will run on localhost port 4321
 
 ## Testing
 
-- use Postman or any REST client
+- [POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/12995948/2sBXVo9oCW)
