@@ -94,7 +94,10 @@ npm run build
 npm start
 ```
 
-The API will run on localhost port 4321
+The API will run on:
+
+- [Local](http://localhost:4321/api/v1)
+- [Live](https://todo-tracker-hehp.onrender.com/api/v1)
 
 ## Testing
 
