@@ -34,7 +34,7 @@ A backend assessment project built with **Node.js, Express, TypeScript, and Mong
 - **Express** web framework
 - **MongoDB** + Mongoose ODM
 - **bcrypt** for password hashing
-- **jsonwebtoken** for authentication
+- **jsonwebtoken** for authentication. Access Token expires in 15 minutes
 - **Postman** ready for endpoint testing
 
 ---
